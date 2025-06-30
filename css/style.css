@@ -42,6 +42,9 @@ ol {
   position: absolute;
   top: 14px;
   left: 20px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navbar-close {
   width: 32px;
@@ -52,8 +55,7 @@ ol {
   border: none;
   background-color: #75d281;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navbar-nav {
   padding-top: 32px;
@@ -78,6 +80,7 @@ ol {
   line-height: 160%;
   letter-spacing: 0em;
   color: #030a06;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navbar-address {
   padding-top: 32px;
@@ -102,6 +105,28 @@ ol {
   line-height: 160%;
   letter-spacing: 0em;
   color: #030a06;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navbar-close:hover,
+.navbar-close:focus,
+.nav-link:hover,
+.nav-link:focus,
+.contact-link:hover,
+.contact-link:focus {
+  opacity: 0.5;
+}
+.navbar-logo:hover,
+.navbar-logo:focus {
+  background-color: #030a06;
+  border-radius: 5px;
+}
+
+.navbar-logo:hover .navbar-logo-icon {
+  fill: #fff;
+}
+
+.navbar-logo:focus .navbar-logo-icon {
+  fill: #fff;
 }
 
 @media screen and (min-width: 768px) {
@@ -130,7 +155,6 @@ ol {
     border: none;
     background-color: #75d281;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
